@@ -18,6 +18,7 @@ namespace Microsoft.Azure.SignalR.Samples.ChatRoom
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
+                    
                 });
     }
 }
