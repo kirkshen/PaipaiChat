@@ -24,7 +24,8 @@ namespace Microsoft.Azure.SignalR.Samples.ChatRoom
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            app.UseCors();
+            app.UseHttpsRedirection();
             app.UseDefaultFiles();
             app.UseStaticFiles();
             app.UseRouting();
