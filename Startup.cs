@@ -14,7 +14,7 @@ namespace Microsoft.Azure.SignalR.Samples.ChatRoom
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddSignalR().AddAzureSignalR();
+            services.AddSignalR().AddAzureSignalR("Endpoint=https://paipaimessagesignalr.service.signalr.net;AccessKey=EwVBJaGo0VVPgkAjcDeDKnZMzQBqwex0oRECG26fnqc=;Version=1.0;");
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -24,8 +24,6 @@ namespace Microsoft.Azure.SignalR.Samples.ChatRoom
             {
                 app.UseDeveloperExceptionPage();
             }
-            app.UseCors();
-            app.UseHttpsRedirection();
             app.UseDefaultFiles();
             app.UseStaticFiles();
             app.UseRouting();
