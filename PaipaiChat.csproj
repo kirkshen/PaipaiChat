@@ -9,9 +9,13 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\" />
+    <Folder Include="wwwroot\lib\" />
   </ItemGroup>
   
   <ItemGroup>
     <PackageReference Include="Microsoft.Azure.SignalR" Version="1.*" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="6.0.1" />
+    <PackageReference Include="Microsoft.Web.LibraryManager.Build" Version="2.1.175" />
+    <PackageReference Include="StackExchange.Redis" Version="2.6.66" />
   </ItemGroup>
 </Project>

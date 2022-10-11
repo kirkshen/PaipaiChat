@@ -3,7 +3,7 @@
 
 using Microsoft.AspNetCore.SignalR;
 
-namespace Microsoft.Azure.SignalR.Samples.ChatRoom
+namespace paipaichat
 {
     public class Chat : Hub
     {
