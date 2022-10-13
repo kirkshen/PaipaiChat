@@ -26,6 +26,7 @@ namespace paipaichat
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            //register the service required by signalR hubs
             services.AddSignalR().AddAzureSignalR("Endpoint=https://paipaimessagesignalr.service.signalr.net;AccessKey=EwVBJaGo0VVPgkAjcDeDKnZMzQBqwex0oRECG26fnqc=;Version=1.0;");
             services.AddControllersWithViews();
             services.AddSingleton(async x => await RedisConnection.InitializeAsync(connectionString: Configuration["CacheConnection"].ToString()));
@@ -47,8 +48,10 @@ namespace paipaichat
             app.UseStaticFiles();
             app.UseRouting();
             app.UseAuthorization();
+            //configure endpoint
             app.UseEndpoints(endpoints =>
             {
+                //map chat hub to "/chat" dir
                 endpoints.MapHub<Chat>("/chat");
                 // endpoints.MapControllerRoute(
                 //     name: "default",

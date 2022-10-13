@@ -15,6 +15,7 @@ namespace paipaichat
     {
         public static void Main(string[] args)
         {
+            //build host and run until shut down
             CreateHostBuilder(args).Build().Run();
         }
 
@@ -22,6 +23,7 @@ namespace paipaichat
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
+                    //call startup
                     webBuilder.UseStartup<Startup>();
                     
                 });

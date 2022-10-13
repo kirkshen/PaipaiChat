@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Owner\\Desktop\\PaipaiChat\\PaipaiChat.csproj": {}
+    "/Users/Shared/GitHub/PaipaiChat/PaipaiChat.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Owner\\Desktop\\PaipaiChat\\PaipaiChat.csproj": {
+    "/Users/Shared/GitHub/PaipaiChat/PaipaiChat.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Owner\\Desktop\\PaipaiChat\\PaipaiChat.csproj",
+        "projectUniqueName": "/Users/Shared/GitHub/PaipaiChat/PaipaiChat.csproj",
         "projectName": "PaipaiChat",
-        "projectPath": "C:\\Users\\Owner\\Desktop\\PaipaiChat\\PaipaiChat.csproj",
-        "packagesPath": "C:\\Users\\Owner\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Owner\\Desktop\\PaipaiChat\\obj\\",
+        "projectPath": "/Users/Shared/GitHub/PaipaiChat/PaipaiChat.csproj",
+        "packagesPath": "/Users/liaoluxi/.nuget/packages/",
+        "outputPath": "/Users/Shared/GitHub/PaipaiChat/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Owner\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/liaoluxi/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -74,7 +74,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.100-rc.2.22477.23/RuntimeIdentifierGraph.json"
         }
       }
     }

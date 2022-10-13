@@ -21,7 +21,7 @@ namespace paipaichat.Controllers
             _configuration = configuration;
             _redisConnectionFactory = redisConnectionFactory;
         }
-
+        //use injected repo to get data
         public IActionResult Index()
         {
             return View();
