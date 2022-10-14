@@ -3,15 +3,24 @@
 
 using Microsoft.AspNetCore.SignalR;
 
-
 namespace paipaichat
 {
     public class Chat : Hub
     {
+        // private readonly EFContext _context;
+        //private readonly RedisCache _cache;
 
-        public void BroadcastMessage(string name, string message)
+        // public Chat(IDistributedCache cacheProvider){
+        //     // _context = context;
+        //     _cache = new RedisCache(cacheProvider);
+        // }
+
+        public async Task BroadcastMessage(string name, string message)
         {
-            Clients.All.SendAsync("broadcastMessage", name, message);
+            //var expected = DateTimeOffset.Now - TimeSpan.FromMinutes(1);
+            await Clients.All.SendAsync("broadcastMessage", name, message);
+            
+            //await _cache.Set(name,message, new DistributedCacheEntryOptions().SetAbsoluteExpiration(expected));
         }
 
         public void Echo(string name, string message)
