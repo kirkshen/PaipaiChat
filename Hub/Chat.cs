@@ -3,6 +3,7 @@
 
 using Microsoft.AspNetCore.SignalR;
 
+
 namespace paipaichat
 {
     public class Chat : Hub
@@ -14,6 +15,7 @@ namespace paipaichat
 
         public void Echo(string name, string message)
         {
+            HomeController hc = new HomeController();
             Clients.Client(Context.ConnectionId).SendAsync("echo", name, message + " (echo from server)");
         }
     }

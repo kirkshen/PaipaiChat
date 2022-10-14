@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace paipaichat.Controllers
+namespace paipaichat
 {
     public class HomeController : Controller
     {
@@ -22,15 +22,15 @@ namespace paipaichat.Controllers
             _redisConnectionFactory = redisConnectionFactory;
         }
 
-        public IActionResult Index()
-        {
-            return View();
-        }
+        // public IActionResult Index()
+        // {
+        //     return View();
+        // }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
+        // public IActionResult Privacy()
+        // {
+        //     return View();
+        // }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
@@ -42,13 +42,13 @@ namespace paipaichat.Controllers
         {
             _redisConnection = await _redisConnectionFactory;
             ViewBag.Message = "A simple example with Azure Cache for Redis on ASP.NET Core.";
-
+            
             // Perform cache operations using the cache object...
 
             // Simple PING command
             ViewBag.command1 = "PING";
             ViewBag.command1Result = (await _redisConnection.BasicRetryAsync(async (db) => await db.ExecuteAsync(ViewBag.command1))).ToString();
-
+            
             // Simple get and put of integral data types into the cache
             string key = "Message";
             string value = "Hello! The cache is working from ASP.NET Core!";
@@ -58,6 +58,7 @@ namespace paipaichat.Controllers
 
             ViewBag.command3 = $"GET {key}";
             ViewBag.command3Result = (await _redisConnection.BasicRetryAsync(async (db) => await db.StringGetAsync(key))).ToString();
+            Console.WriteLine((await _redisConnection.BasicRetryAsync(async (db) => await db.StringGetAsync(key))).ToString());
 
             key = "LastUpdateTime";
             value = DateTime.UtcNow.ToString();
