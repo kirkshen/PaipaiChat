@@ -53,6 +53,7 @@ namespace paipaichat
             {
                 //map chat hub to "/chat" dir
                 endpoints.MapHub<Chat>("/chat");
+                endpoints.MapHub<Entry>("/entry");
                 // endpoints.MapControllerRoute(
                 //     name: "default",
                 //     pattern: "{controller=Home}/{action=Index}/{id?}");
