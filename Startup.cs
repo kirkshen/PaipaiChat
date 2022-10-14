@@ -28,7 +28,6 @@ namespace paipaichat
         {
             services.AddSignalR().AddAzureSignalR("Endpoint=https://paipaimessagesignalr.service.signalr.net;AccessKey=EwVBJaGo0VVPgkAjcDeDKnZMzQBqwex0oRECG26fnqc=;Version=1.0;");
             services.AddControllersWithViews();
-            services.AddSingleton(async x => await RedisConnection.InitializeAsync(connectionString: Configuration["CacheConnection"].ToString()));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

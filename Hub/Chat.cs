@@ -8,6 +8,7 @@ namespace paipaichat
 {
     public class Chat : Hub
     {
+
         public void BroadcastMessage(string name, string message)
         {
             Clients.All.SendAsync("broadcastMessage", name, message);
@@ -15,7 +16,6 @@ namespace paipaichat
 
         public void Echo(string name, string message)
         {
-            HomeController hc = new HomeController();
             Clients.Client(Context.ConnectionId).SendAsync("echo", name, message + " (echo from server)");
         }
     }
