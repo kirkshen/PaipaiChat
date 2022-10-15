@@ -27,7 +27,7 @@ namespace paipaichat
         public void ConfigureServices(IServiceCollection services)
         {
             //register the service required by signalR hubs
-            services.AddSignalR().AddAzureSignalR("Endpoint=https://paipaimessagesignalr.service.signalr.net;AccessKey=EwVBJaGo0VVPgkAjcDeDKnZMzQBqwex0oRECG26fnqc=;Version=1.0;");
+            services.AddSignalR().AddAzureSignalR("Endpoint=https://paipaisignalr.service.signalr.net;AccessKey=xvCB88J0XjYLkhO1oQ6yO9j5nGnSXWb/kysDihoDB4I=;Version=1.0;");
             services.AddControllersWithViews();
             services.AddSingleton(async x => await RedisConnection.InitializeAsync(connectionString: Configuration["CacheConnection"].ToString()));
         }

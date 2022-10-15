@@ -3,12 +3,15 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workbench ActiveDocument="Hub/EntryHub.cs">
     <Files>
-      <File FileName="Hub/EntryHub.cs" Line="21" Column="2" />
-      <File FileName="Models/EmptyClass.cs" Line="9" Column="32" />
-      <File FileName="Models/ErrorViewModel.cs" Line="1" Column="1" />
+      <File FileName="Models/NonRefungibleEntry.cs" Line="17" Column="1" />
+      <File FileName="Hub/EntryHub.cs" Line="20" Column="50" />
+      <File FileName="Models/ErrorViewModel.cs" Line="11" Column="2" />
+      <File FileName="Startup.cs" Line="56" Column="51" />
+      <File FileName="Controllers/HomeController.cs" Line="1" Column="1" />
+      <File FileName="DemiData/NFEList.json" Line="22" Column="50" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -17,10 +20,11 @@
             <Node name="PaipaiChat" expanded="True">
               <Node name="Dependencies" expanded="True" />
               <Node name="Controllers" expanded="True" />
-              <Node name="Hub" expanded="True" />
-              <Node name="Models" expanded="True">
-                <Node name="NonRefungibleEntry.cs" selected="True" />
+              <Node name="DemiData" expanded="True">
+                <Node name="NFEList.json" selected="True" />
               </Node>
+              <Node name="Hub" expanded="True" />
+              <Node name="Models" expanded="True" />
             </Node>
           </Node>
         </State>
@@ -28,5 +32,5 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.PaipaiChat PreferredExecutionTarget="/Applications/Microsoft Edge.app" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>
