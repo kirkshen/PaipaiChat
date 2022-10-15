@@ -28,12 +28,6 @@ namespace paipaichat
         {
             services.AddSignalR().AddAzureSignalR("Endpoint=https://paipaimessagesignalr.service.signalr.net;AccessKey=EwVBJaGo0VVPgkAjcDeDKnZMzQBqwex0oRECG26fnqc=;Version=1.0;");
             services.AddControllersWithViews();
-            //services.AddDbContext<EFContext>(options=> options.UseSqlServer(Configuration.GetConnectionString("SqlConnection")));
-            services.AddStackExchangeRedisCache(
-                setupAction => {
-                    setupAction.Configuration = Configuration.GetConnectionString("CacheConnection");
-            });
-            Console.WriteLine("connected...");
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -55,9 +49,6 @@ namespace paipaichat
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapHub<Chat>("/chat");
-                // endpoints.MapControllerRoute(
-                //     name: "default",
-                //     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }
