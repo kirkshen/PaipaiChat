@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/Users/Shared/GitHub/PaipaiChat/PaipaiChat.csproj": {}
+    "C:\\Users\\mi888\\Documents\\GitHub\\PaipaiChat\\PaipaiChat.csproj": {}
   },
   "projects": {
-    "/Users/Shared/GitHub/PaipaiChat/PaipaiChat.csproj": {
+    "C:\\Users\\mi888\\Documents\\GitHub\\PaipaiChat\\PaipaiChat.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/Shared/GitHub/PaipaiChat/PaipaiChat.csproj",
+        "projectUniqueName": "C:\\Users\\mi888\\Documents\\GitHub\\PaipaiChat\\PaipaiChat.csproj",
         "projectName": "PaipaiChat",
-        "projectPath": "/Users/Shared/GitHub/PaipaiChat/PaipaiChat.csproj",
-        "packagesPath": "/Users/liaoluxi/.nuget/packages/",
-        "outputPath": "/Users/Shared/GitHub/PaipaiChat/obj/",
+        "projectPath": "C:\\Users\\mi888\\Documents\\GitHub\\PaipaiChat\\PaipaiChat.csproj",
+        "packagesPath": "C:\\Users\\mi888\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mi888\\Documents\\GitHub\\PaipaiChat\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/liaoluxi/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\mi888\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -74,7 +76,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.100-rc.2.22477.23/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }
