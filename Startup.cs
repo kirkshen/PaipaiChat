@@ -52,8 +52,8 @@ namespace paipaichat
             app.UseEndpoints(endpoints =>
             {
                 //map chat hub to "/chat" dir
-                endpoints.MapHub<Chat>("/chat");
                 endpoints.MapHub<Entry>("/entry");
+                endpoints.MapHub<Chat>("/chat");
                 // endpoints.MapControllerRoute(
                 //     name: "default",
                 //     pattern: "{controller=Home}/{action=Index}/{id?}");

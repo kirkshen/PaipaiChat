@@ -13,16 +13,10 @@ namespace paipaichat
          */
         public async Task PushFeed(string connectionId /*NonRefungibleEntry[] entries*/)
         {
-            //get data according to the connectionId
-            /*var entryString = System.Text.Json.JsonSerializer.Serialize(entries);*/
-
             //TODO real data 
             //TODO dynamic size
-            //string entryJson = File.ReadAllText("..\\DemiData\\NFEList.json");
-            
-            /*1st param: a function name; 2nd param: data to pass */
-            //!Trigger the event! on client, & pass parameter
-            await Clients.All.SendAsync("RecieveNFEPush", "no");
+            //DEBUG push NFE obj
+            await Clients.All.SendAsync("RecieveNFEPush", connectionId);
         }
         /*
          * possibly hub protocal: JSON 

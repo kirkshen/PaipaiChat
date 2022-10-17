@@ -22,4 +22,11 @@
   <ItemGroup>
     <None Remove="DemiData\" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Update="Properties\ServiceDependencies\PaipaiChatAppServices - Web Deploy\profile.arm.json">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
 </Project>
