@@ -28,8 +28,6 @@ namespace paipaichat
         {
             //register the service required by signalR hubs
             services.AddControllersWithViews();
-            services.AddSignalR().AddAzureSignalR("Endpoint=https://paipaisignalr.service.signalr.net;AccessKey=xvCB88J0XjYLkhO1oQ6yO9j5nGnSXWb/kysDihoDB4I=;Version=1.0;");// Endpoint=https://paipaisignalr.service.signalr.net;AccessKey=xvCB88J0XjYLkhO1oQ6yO9j5nGnSXWb/kysDihoDB4I=;Version=1.0;
-            services.AddSingleton(async x => await RedisConnection.InitializeAsync(connectionString: Configuration["CacheConnection"].ToString()));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -54,9 +52,6 @@ namespace paipaichat
                 //map chat hub to "/chat" dir
                 endpoints.MapHub<Entry>("/entry");
                 endpoints.MapHub<Chat>("/chat");
-                // endpoints.MapControllerRoute(
-                //     name: "default",
-                //     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }

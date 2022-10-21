@@ -2,14 +2,18 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using Microsoft.AspNetCore.SignalR;
+using Newtonsoft.Json;
+using Microsoft.Extensions.Caching.Distributed;
 
 namespace paipaichat
 {
     public class Chat : Hub
     {
-        public void BroadcastMessage(string name, string message)
+        private IDistributedCache _cache;
+
+        public async Task BroadcastMessage(string name, string message)
         {
-            Clients.All.SendAsync("broadcastMessage", name, message);
+            await Clients.All.SendAsync("broadcastMessage", name, message);
         }
 
         public void Echo(string name, string message)
